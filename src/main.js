@@ -1,6 +1,8 @@
 import Phaser from './lib/phaser.js'
 
+import start from './scenes/start.js'
 import game from './scenes/game.js'
+import gameOver from './scenes/game-over.js'
 
 export default new Phaser.Game({
     type: Phaser.AUTO,
@@ -12,8 +14,8 @@ export default new Phaser.Game({
             gravity: {
                 y: 300
             },
-            debug: true
+            debug: false
         }
     },
-    scene: [game, ]
+    scene: [start, game, gameOver]
 })
